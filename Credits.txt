@@ -1,3 +1,15 @@
+I started this a few years back and then got sidetracked by life.
+
+I restarted this in an attempt to finish it.
+
+Since code has moved on a lot I will attempt to tidy it up and move it into the 21st century.  Specifically this meant removing the project specfic code and replacing it with a CMake file (which personally I hate but is the now the norm) and removing the #ifdef specific code which was there from the dark ages of programming.
+
+GR
+
+        ================================================================
+                Taken from Jim Burrows AKA Brons
+        ================================================================
+
 StarGen/starform/accrete has a long and varied history. Many people have altered it over time. The original program was written in Fortran about 30 years ago at Rand. About 15 years ago, in 1985, Martyn Fogg wrote a version of it and published his results. This lead Matt Burdick to create a version first in Pascal and then in C. This program was called "starform" that showed up on the net in about 1988. Several versions of starform have since been developed and distributed by Ian Burrell, Carl Burke and Chris Croughton AKA Keris.
 
 Each of the authors has attempted to preserve the credits of those who came before, but it is often hard to know whose voice the different bits are written in. This is my attempt to continue the tradition of giving Credit where credit is due. I've missed things and made mistakes, no doubt.

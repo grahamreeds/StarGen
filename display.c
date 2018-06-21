@@ -2,22 +2,6 @@
 #include	<string.h>
 #include	<math.h>
 
-#ifdef THINK_C
-#define macintosh 1
-#endif
-
-#ifdef macintosh
-#include	<console.h>
-#include	<unix.h>
-#endif
-
-#ifdef MSDOS
-#include	<stddef.h>
-#include	<stdlib.h>
-#include	<string.h>
-#include	<float.h>
-#endif
-
 #include	"structs.h"
 #include	"const.h"
 #include	"display.h"
@@ -530,15 +514,7 @@ void create_svg_file (FILE				*file_arg,
 	{
 		sprintf (&file_spec[0], "%s%s%s", path, file_name, svg_ext);
 
-#ifdef macintosh
-		_fcreator ='MSIE';
-		_ftype = 'TEXT';
-#endif
 		file = fopen (file_spec, "w");
-#ifdef macintosh
-		_fcreator ='R*ch';
-		_ftype = 'TEXT';
-#endif
 	}
 	else
 	{
@@ -729,15 +705,7 @@ FILE *open_csv_file (char *path,
 
 	sprintf (&file_spec[0], "%s%s", path, file_name);
 	
-#ifdef macintosh
-		_fcreator ='XCEL';
-		_ftype = 'TEXT';
-#endif
-		file = fopen (file_spec, "w");
-#ifdef macintosh
-		_fcreator ='R*ch';
-		_ftype = 'TEXT';
-#endif
+	file = fopen (file_spec, "w");
 	
 	return file;
 }
@@ -767,15 +735,7 @@ FILE *open_html_file (char *system_name,
 	{
 		sprintf (&file_spec[0], "%s%s%s", path, file_name, ext);
 	
-#ifdef macintosh
-		_fcreator ='MSIE';
-		_ftype = 'TEXT';
-#endif
 		file = fopen (file_spec, "w");
-#ifdef macintosh
-		_fcreator ='R*ch';
-		_ftype = 'TEXT';
-#endif
 	}
 
 	if (NULL != file)

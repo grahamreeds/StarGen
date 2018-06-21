@@ -15,29 +15,6 @@
 #include	<time.h>
 #include	<ctype.h>
 
-#include	"Dumas.h"
-
-#ifdef THINK_C
-#define macintosh 1
-#endif
-
-#ifdef macintosh
-#include	<console.h>
-#include	<unix.h>
-#else
-#include	<sys/types.h>
-#endif
-
-#ifdef MSDOS
-#include	<stddef.h>
-#include	<stdlib.h>
-#include	<float.h>
-#endif
-
-#ifdef WIN32
-#pragma warning (disable: 4048) // Hush compiler - don't complain about storing specific arrays in generic pointers
-#endif
-
 #include	"const.h"
 #include	"structs.h"
 #include 	"accrete.h"
